@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="card shadow p-3">
+        <div class="card-body">
+            <h5 class="card-title">{{task.name}}</h5>
+            <p><b>{{task.priority}}</b></p>
+            <p><b>{{task.date}}</b></p>
+            <a class="btn btn-warning" href="{% url 'cbvupdate' task.id %}">Update</a>
+            <a class="btn btn-primary" href="{% url 'home' %}">Go Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

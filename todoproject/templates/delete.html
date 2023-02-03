@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                  <div class="card shadow p-3">
+                    <div class="card-title">
+                        <p class="confirm">Are you sure, this Task is Done?</p>
+                        <button class="btn btn-danger" type="submit">Confirm</button>
+                        <a class="btn btn-primary" href="{% url 'home' %}">Go Home</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
